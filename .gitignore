@@ -1,0 +1,11 @@
+# 模块就不上传了
+node_modules/
+
+# 输入目录
+dist/
+
+# IDE的配置文件也不要
+.idea/
+
+# map文件也不要
+*.map

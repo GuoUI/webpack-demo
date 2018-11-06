@@ -1,7 +1,8 @@
-const path = require('path');
+const path = require("path");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    entry: './main.js',
+    entry: "./main.js",
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, './dist'),
@@ -21,5 +22,9 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+	plugins: [
+		// extract-text-webpack-plugin 这插件不知道为啥不管用
+		new ExtractTextPlugin("styles.css"),
+    ]
 }
